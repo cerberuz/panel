@@ -1,0 +1,380 @@
+        
+#contenedor{  
+    background-color:#FFF;
+}  
+#cabecera{  
+    background:#FFF none repeat scroll 0% 0%;
+    height:20%;
+    border-bottom:3px solid #A21D11;
+}
+#izquierda{  
+    height:100%;  
+    background:#580600 none repeat scroll 0% 0%;
+    float:left;  
+    width:25%;
+    position: absolute;
+}  
+#derecha{  
+    height:100%;
+    float:right;  
+    width:75%;
+    margin-bottom: 0px
+}
+
+#derecha video {
+    padding: 1% 0 0 5%;
+
+}
+
+#listaVideo
+{
+	max-width: 80%;
+}
+
+#contenedor #derecha .local { line-height: 1; }
+#contenedor #derecha .numero-local { line-height: 1; }
+
+/* 
+ * Senha Atual - Ultima senha chamada
+ */
+#mensagem {
+    text-align: center;
+}
+
+#mensagem span {
+    padding: 10px 29px;
+    display: inline-block;
+}
+
+#senha {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* local */
+
+#local {
+    margin: 0 auto;
+    padding-right: 20px;
+    display: inline-block;
+}
+
+#local-numero {    
+    font-weight: bold;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#izquierda .senha-local {
+    text-align: center;
+}
+
+/*
+ * Ultimas senhas chamadas
+ */
+#historico {
+    width: 100%;
+    height: 100%;
+}
+
+#historico .senhas {
+    height: 100%;
+    overflow: hidden;
+}
+
+#historico .senhas div.senha-chamada {
+    display: block;
+}
+
+#historico .senhas div.senha-chamada div.senha { 
+    font-weight: bold; 
+    text-align: center;
+}
+
+#historico .senhas div.senha-chamada div.local {
+    text-align: center;
+}
+
+#marquee { 
+    bottom: 5px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#marquee p {
+    top: 0;
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+}
+
+/* cores - atendimento normal */
+#dialog-message { background-color: #580600; }
+#contenedor.normal #mensagem span { color: #fff; }
+#contenedor.normal #senha span { color: #eeff00; }
+#contenedor.normal #local span { color: #fff; }
+#contenedor.normal #local-numero span { color: #fff; }
+#contenedor.normal #historico .senhas { background: #580600; }
+#contenedor.normal #historico .senhas * { color: #fff; }
+#contenedor.normal #marquee p { color: #000; }
+
+/* cores - atendimento prioritario */
+#contenedor.prioridade { background-color: #fff; }
+#contenedor.prioridade #senha-container span { color: #d2322d; }
+#contenedor.prioridade #historico .senhas { background-color: #f1f1f1; }
+#contenedor.prioridade #historico .senhas * { color: #333; }
+#contenedor.prioridade #marquee p { color: #000; }
+
+/* cores - atendimento prioritario quando no historico */
+#historico .senhas .prioridade * { color: #d2322d !important; }
+
+/* not supported resolution */
+@media only screen and (max-width: 780px) {
+}
+@media only screen and (min-width: 1441px) {
+}
+
+/* 1440x900 */
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+    
+    #mensagem {
+        padding: 0;/*20px 0;*/
+    }
+    
+    #mensagem span {
+        font-size: 4em;
+    }
+    
+    #senha {
+        padding: 0;/*30px 0 20px 0;*/
+    }
+        
+    #senha span {
+        font-size: 8em;
+    }
+    
+    #local span {
+        font-size: 4em;
+    }
+    
+    #local-numero span {
+        font-size: 6em;
+    }
+    
+    .senha-chamada .senha span {
+        font-size: 3em;
+    }
+    
+    .senha-chamada .local span {
+        font-size: 2em;
+    }
+    
+    #marquee {
+        padding-top: 60px !important;
+    }
+    
+    #marquee p {
+        font-size: 3em;
+    }
+    
+    #historico .senhas div.senha-chamada {
+        padding: 12px 0;
+    }
+    
+}
+
+/* 1024x768 */
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+.ui-dialog
+{
+	width: 600px;
+	height: 500px;
+}
+    
+    #mensagem {
+        padding: 0;/*20px 0;*/
+    }
+    
+    #mensagem span {
+        font-size: 3em;
+    }
+    
+    #senha {
+        padding: 0;/*30px 0 20px 0;*/
+    }
+        
+    #senha span {
+        font-size: 8em;
+    }
+    
+    #local span {
+        font-size: 3em;
+    }
+    
+    #local-numero span {
+        font-size: 6em;
+    }
+    
+    .senha-chamada .senha span {
+        font-size: 6em;
+    }
+    
+    .senha-chamada .local span {
+        font-size: 2em;
+    }
+    
+    #marquee {
+        padding-top: 60px !important;
+    }
+    
+    #marquee p {
+        font-size: 3em;
+    }
+    
+    #historico .senhas div.senha-chamada {
+        padding: 30px 0;
+    }
+    
+}
+
+/* 800x600 */
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+.ui-dialog
+{
+	width: 400px;
+	height: 300px;
+}
+    #mensagem {
+    }
+    
+    #mensagem span {
+        font-size: 2em;
+    }
+        
+    #senha span {
+        font-size: 6em;
+    }
+    
+    #local span {
+        font-size: 2em;
+    }
+    
+    #local-numero span {
+        font-size: 4em;
+    }
+    
+    .senha-chamada .senha span {
+        font-size: 2em;
+    }
+    
+    .senha-chamada .local span {
+        font-size: 1em;
+    }
+    
+    #marquee {
+        padding-top: 60px !important;
+    }
+    
+    #marquee p {
+        font-size: 3em;
+    }
+    
+    #historico .senhas div.senha-chamada {
+        padding: 18px 0;
+    }
+    
+}
+
+/* 800x600 */
+@media only screen and (max-width: 600px) {
+.ui-dialog
+{
+	width: 300px;
+	height: 300px;
+}
+    #mensagem {
+    }
+    
+    #mensagem span {
+        font-size: 2em;
+    }
+        
+    #senha span {
+        font-size: 6em;
+    }
+    
+    #local span {
+        font-size: 2em;
+    }
+    
+    #local-numero span {
+        font-size: 4em;
+    }
+    
+    .senha-chamada .senha span {
+        font-size: 2em;
+    }
+    
+    .senha-chamada .local span {
+        font-size: 1em;
+    }
+    
+    #marquee {
+        padding-top: 60px !important;
+    }
+    
+    #marquee p {
+        font-size: 3em;
+    }
+    
+    #historico .senhas div.senha-chamada {
+        padding: 18px 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+	.ui-dialog
+	{
+		width: 200px;
+		height: 200px;
+	}
+    #mensagem {
+    }
+    
+    #mensagem span {
+        font-size: 1.3em;
+    }
+        
+    #senha span {
+        font-size: 3em;
+    }
+    
+    #local span {
+        font-size: 1.2em;
+    }
+    
+    #local-numero span {
+        font-size: 2em;
+    }
+    
+    .senha-chamada .senha span {
+        font-size: 1.2em;
+    }
+    
+    .senha-chamada .local span {
+        font-size: 1em;
+    }
+    
+    #marquee {
+        padding-top: 60px !important;
+    }
+    
+    #marquee p {
+        font-size: 3em;
+    }
+    
+    #historico .senhas div.senha-chamada {
+        padding: 18px 0;
+    }
+}

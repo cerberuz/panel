@@ -1,0 +1,37 @@
+<div id ="cabecera">
+    <div class="top"><img src="themes/marquee/images/logosilueta.jpg" height="70px" width="150px" style="padding: 5px 10px 0px 10px;"><img src="themes/marquee/images/logo.jpeg" height="70px" width="130px" style="float: right; padding: 0px 0px 0px 20px">
+    </div>
+</div>  
+
+<div id ="izquierda">
+    <div id="historico">
+        <div class="senhas">
+            <div class="senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico">
+                <div class="senha">
+                    <span>{{ senha.texto }}</span>
+                </div>
+                <div class="local">
+                    <span>{{ senha.local }}: {{ senha.numeroLocal }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id ="derecha">
+    <video id="listaVideo" autoplay controls preload="auto" width="80%" height="100%" onended="proximoVideo()" onerror="proximoVideo()" onstalled="proximoVideo()">
+	<source id="1" class="source" src="../../videos/video01.mp4" type="video/mp4">
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+    <div id="marquee">
+        <p></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
